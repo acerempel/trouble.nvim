@@ -199,11 +199,11 @@ function Trouble.action(action)
     view:switch_to_parent()
   end
   if action == "next" then
-    view:next_item()
+    view:next_item({ count = vim.v.count1 })
     return Trouble
   end
   if action == "previous" then
-    view:previous_item()
+    view:previous_item({ count = vim.v.count1 })
     return Trouble
   end
 
